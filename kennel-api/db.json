@@ -50,17 +50,20 @@
     {
       "id": 1,
       "name": "Billy Bob",
-      "location": "Nashville, Tn"
+      "location": "Nashville, Tn",
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Jimmy Johnson",
-      "location": "Dallas, Tx"
+      "location": "Dallas, Tx",
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Michelle Obama",
-      "location": "Washington, DC"
+      "location": "Washington, DC",
+      "locationId": 1
     }
   ],
   "locations": [

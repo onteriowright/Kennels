@@ -1,52 +1,36 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { LocationProvider } from "./location/LocationsDataProvider";
-import { AnimalProvider } from "./animal/AnimalsDataProvider";
 import LocationListComponent from "./location/LocationListComponent";
 import AnimalListComponent from "./animal/AnimalListComponent";
-import { CustomerProvider } from "./customer/CustomersDataProvider";
 import CustomersListComponent from "./customer/CustomersListComponent";
-import { EmployeeProvider } from "./employee/EmployeeDataProvider";
 import EmployeeListComponent from "./employee/EmployeeListComponent";
 import EmployeeForm from "./employee/EmployeeForm";
-
+import MainProvider from "./MainProvider";
 export default props => {
   return (
     <>
-      <LocationProvider>
+      <MainProvider>
         <Route exact path="/">
           <LocationListComponent />
         </Route>
-      </LocationProvider>
 
-      <AnimalProvider>
-        <LocationProvider>
-          <CustomerProvider>
-            <Route path="/animals">
-              <AnimalListComponent />
-            </Route>
-          </CustomerProvider>
-        </LocationProvider>
-      </AnimalProvider>
+        <Route exact path="/animals">
+          <AnimalListComponent />
+        </Route>
 
-      <CustomerProvider>
-        <Route path="/customers">
+        <Route exact path="/customers">
           <CustomersListComponent />
         </Route>
-      </CustomerProvider>
 
-      <EmployeeProvider>
-        <LocationProvider>
-          <Route
-            exact
-            path="/employees"
-            render={props => <EmployeeListComponent {...props} />}
-          ></Route>
-          <Route exact path="/employees/create">
-            <EmployeeForm />
-          </Route>
-        </LocationProvider>
-      </EmployeeProvider>
+        <Route
+          exact
+          path="/employees"
+          render={props => <EmployeeListComponent {...props} />}
+        ></Route>
+        <Route exact path="/employees/create">
+          <EmployeeForm />
+        </Route>
+      </MainProvider>
     </>
   );
 };
