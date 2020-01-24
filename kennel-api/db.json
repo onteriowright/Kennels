@@ -5,7 +5,28 @@
       "name": "Doodles",
       "breed": "Poodle",
       "customerId": 1,
+      "locationId": 1
+    },
+    {
+      "id": 2,
+      "name": "Dutchess",
+      "breed": "PitBull",
+      "customerId": 2,
       "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Duece",
+      "breed": "PitBull",
+      "customerId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 4,
+      "name": "Clifford",
+      "breed": "The Big Red Dog",
+      "customerId": 1,
+      "locationId": 1
     }
   ],
   "customers": [
@@ -13,6 +34,16 @@
       "id": 1,
       "name": "Hannah Hall",
       "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Onterio Wright",
+      "address": "6th Street"
+    },
+    {
+      "id": 3,
+      "name": "Sean Carter",
+      "address": "Merry Go Lane"
     }
   ],
   "employees": [
@@ -20,6 +51,16 @@
       "id": 1,
       "name": "Billy Bob",
       "location": "Nashville, Tn"
+    },
+    {
+      "id": 2,
+      "name": "Jimmy Johnson",
+      "location": "Dallas, Tx"
+    },
+    {
+      "id": 3,
+      "name": "Michelle Obama",
+      "location": "Washington, DC"
     }
   ],
   "locations": [
