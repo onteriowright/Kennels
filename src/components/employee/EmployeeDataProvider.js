@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 
 export const EmployeeContext = React.createContext();
 
-export const EmployeeProvider = props => {
+const EmployeeProvider = props => {
   const [employees, setEmployees] = useState([]);
 
   const getEmployees = () => {
@@ -18,7 +19,9 @@ export const EmployeeProvider = props => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(employee)
-    }).then(getEmployees);
+    })
+      .then(getEmployees)
+      .then(props.history.push("/employees"));
   };
 
   useEffect(() => {
@@ -40,3 +43,5 @@ export const EmployeeProvider = props => {
     </EmployeeContext.Provider>
   );
 };
+
+export default withRouter(EmployeeProvider);

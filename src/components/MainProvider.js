@@ -1,6 +1,6 @@
 import React from "react";
 import { LocationProvider } from "./location/LocationsDataProvider";
-import { EmployeeProvider } from "./employee/EmployeeDataProvider";
+import EmployeeProvider from "./employee/EmployeeDataProvider";
 import { CustomerProvider } from "./customer/CustomersDataProvider";
 import { AnimalProvider } from "./animal/AnimalsDataProvider";
 

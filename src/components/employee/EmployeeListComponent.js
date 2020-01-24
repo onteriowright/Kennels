@@ -17,10 +17,12 @@ export default props => {
       >
         Add Employee
       </button>
+
       {employees.map(employee => {
         const foundLocation = locations.find(
           location => location.id === employee.locationId
         );
+
         return (
           <Employee
             key={employee.id}
