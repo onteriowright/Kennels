@@ -24,9 +24,7 @@ export default props => {
 
         <Route exact path="/employees" render={props => <EmployeeListComponent {...props} />}></Route>
 
-        <Route exact path="/employees/create">
-          <EmployeeForm />
-        </Route>
+        <Route exact path="/employees/create" render={props => <EmployeeForm {...props} />}></Route>
       </MainProvider>
     </>
   );

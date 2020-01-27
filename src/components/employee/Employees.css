@@ -1,17 +1,26 @@
-.employees {
+.employeeList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .employee {
-  flex-basis: 28%;
+  flex-basis: 33%;
   margin: 1em;
   padding: 1em;
   border: 1px solid goldenrod;
 }
 
+fieldset {
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.form-group, .form-control {
+  margin-bottom: 1.0em;
+}
+
 .btn {
-  height: 50px;
-  width: 100px;
+  margin-left: 10px;
 }

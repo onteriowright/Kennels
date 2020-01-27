@@ -14,12 +14,13 @@ export default props => {
       <button className="btn" onClick={() => props.history.push("/employees/create")}>
         Add Employee
       </button>
+      <article className="employeeList">
+        {employees.map(employee => {
+          const foundLocation = locations.find(location => location.id === employee.locationId);
 
-      {employees.map(employee => {
-        const foundLocation = locations.find(location => location.id === employee.locationId);
-
-        return <Employee key={employee.id} employee={employee} location={foundLocation} />;
-      })}
+          return <Employee key={employee.id} employee={employee} location={foundLocation} />;
+        })}
+      </article>
     </div>
   );
 };
