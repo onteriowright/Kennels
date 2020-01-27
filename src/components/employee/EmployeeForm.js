@@ -31,7 +31,7 @@ export default props => {
         <div className="form-group">
           <label htmlFor="employeeName">Employee name</label>
           <br />
-          <input className="employeeInfo" type="text" id="employeeName" ref={employeeName} required autoFocus className="form-control" placeholder="Employee name" />
+          <input type="text" id="employeeName" ref={employeeName} required autoFocus className="form-control" placeholder="Employee name" />
         </div>
         <div className="form-group">
           <label htmlFor="location">Assign to location</label>
