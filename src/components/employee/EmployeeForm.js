@@ -9,11 +9,12 @@ export default props => {
   const employeeName = useRef("");
   const employeeLocation = useRef(0);
 
-  let locationId = "";
   const constructNewEmployee = () => {
-    locationId = parseInt(employeeLocation.current.value);
-
-    if (locationId === 0) {
+    const locationId = parseInt(employeeLocation.current.value);
+    const nameValue = employeeName.current.value;
+    if (nameValue === "") {
+      alert("Please enter name");
+    } else if (locationId === 0) {
       alert("Please select a location");
     } else {
       addEmployees({
@@ -28,11 +29,13 @@ export default props => {
       <h2 className="employeeForm__title">New Employee</h2>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="employeeName">Employee name</label><br/>
+          <label htmlFor="employeeName">Employee name</label>
+          <br />
           <input className="employeeInfo" type="text" id="employeeName" ref={employeeName} required autoFocus className="form-control" placeholder="Employee name" />
         </div>
         <div className="form-group">
-          <label htmlFor="location">Assign to location</label><br/>
+          <label htmlFor="location">Assign to location</label>
+          <br />
           <select defaultValue="" name="location" ref={employeeLocation} id="employeeLocation" className="form-control">
             <option value="0">Select a location</option>
             {locations.map(location => (
