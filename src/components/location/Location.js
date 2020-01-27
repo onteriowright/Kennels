@@ -6,8 +6,8 @@ export default ({ location, employee }) => (
     <h3 className="location__name">{location.name}</h3>
     <address className="location__address">{location.address}</address>
     <ul>
-      {employee.map(e => (
-        <li key={e.id}>{e.name}</li>
+      {employee.map(singleEmployee => (
+        <li key={singleEmployee.id}>{singleEmployee.name}</li>
       ))}
     </ul>
   </section>

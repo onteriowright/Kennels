@@ -53,8 +53,7 @@ export const CustomerProvider = props => {
       value={{
         customers,
         addCustomers
-      }}
-    >
+      }}>
       {props.children}
     </CustomerContext.Provider>
   );

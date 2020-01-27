@@ -22,11 +22,7 @@ export default props => {
           <CustomersListComponent />
         </Route>
 
-        <Route
-          exact
-          path="/employees"
-          render={props => <EmployeeListComponent {...props} />}
-        ></Route>
+        <Route exact path="/employees" render={props => <EmployeeListComponent {...props} />}></Route>
 
         <Route exact path="/employees/create">
           <EmployeeForm />

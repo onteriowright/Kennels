@@ -11,16 +11,8 @@ export default () => {
   return (
     <div className="locations">
       {locations.map(location => {
-        const currentEmployees = employees.filter(
-          employee => employee.locationId === location.id
-        );
-        return (
-          <Location
-            key={location.id}
-            location={location}
-            employee={currentEmployees}
-          />
-        );
+        const currentEmployees = employees.filter(employee => employee.locationId === location.id);
+        return <Location key={location.id} location={location} employee={currentEmployees} />;
       })}
     </div>
   );

@@ -13,20 +13,9 @@ export default () => {
   return (
     <div className="animals">
       {animals.map(animal => {
-        const owner = customers.find(
-          customer => customer.id === animal.customerId
-        );
-        const clinic = locations.find(
-          location => location.id === animal.locationId
-        );
-        return (
-          <Animal
-            key={animal.id}
-            animal={animal}
-            customer={owner}
-            location={clinic}
-          />
-        );
+        const owner = customers.find(customer => customer.id === animal.customerId);
+        const clinic = locations.find(location => location.id === animal.locationId);
+        return <Animal key={animal.id} animal={animal} customer={owner} location={clinic} />;
       })}
     </div>
   );

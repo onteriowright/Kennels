@@ -37,8 +37,7 @@ const EmployeeProvider = props => {
       value={{
         employees,
         addEmployees
-      }}
-    >
+      }}>
       {props.children}
     </EmployeeContext.Provider>
   );
