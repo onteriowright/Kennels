@@ -31,12 +31,12 @@ export default props => {
         <div className="form-group">
           <label htmlFor="employeeName">Employee name</label>
           <br />
-          <input type="text" id="employeeName" ref={employeeName} required autoFocus className="form-control" placeholder="Employee name" />
+          <input type="text" ref={employeeName} required autoFocus className="form-control" placeholder="Employee name" />
         </div>
         <div className="form-group">
           <label htmlFor="location">Assign to location</label>
           <br />
-          <select defaultValue="" name="location" ref={employeeLocation} id="employeeLocation" className="form-control">
+          <select defaultValue="" name="location" ref={employeeLocation} className="form-control">
             <option value="0">Select a location</option>
             {locations.map(location => (
               <option key={location.id} value={location.id}>
@@ -51,12 +51,17 @@ export default props => {
         onClick={clickEvent => {
           clickEvent.preventDefault();
           constructNewEmployee();
-          employeeName.current.value = "";
-          employeeLocation.current.value = 0;
         }}
         className="btn btn-primary">
         {" "}
         Save Employee{" "}
+      </button>
+      <button
+        onClick={clickEvent => {
+          clickEvent.preventDefault();
+          props.history.push("/employees");
+        }}>
+        Close
       </button>
     </form>
   );

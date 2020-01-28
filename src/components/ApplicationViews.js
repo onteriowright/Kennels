@@ -7,6 +7,7 @@ import EmployeeListComponent from "./employee/EmployeeListComponent";
 import EmployeeForm from "./employee/EmployeeForm";
 import MainProvider from "./MainProvider";
 import AnimalDetails from "./animal/AnimalDetails";
+import AnimalForm from "./animal/AnimalForm";
 
 export default props => {
   return (
@@ -16,19 +17,19 @@ export default props => {
           <LocationListComponent />
         </Route>
 
-        <Route path="/animals">
-          <AnimalListComponent />
-        </Route>
+        <Route exact path="/animals" render={props => <AnimalListComponent {...props} />}></Route>
 
-        <Route path="/customers">
+        <Route exact path="/customers">
           <CustomersListComponent />
         </Route>
 
         <Route exact path="/employees" render={props => <EmployeeListComponent {...props} />}></Route>
 
-        <Route path="/employees/create" render={props => <EmployeeForm {...props} />}></Route>
+        <Route exact path="/employees/create" render={props => <EmployeeForm {...props} />}></Route>
 
-        <Route path="/animals/:animalId(\d+)" render={props => <AnimalDetails {...props} />}></Route>
+        <Route exact path="/animals/:animalId(\d+)" render={props => <AnimalDetails {...props} />}></Route>
+
+        <Route exact path="/animals/create" render={props => <AnimalForm {...props} />}></Route>
       </MainProvider>
     </>
   );

@@ -11,12 +11,12 @@ export default props => {
   return (
     <div className="employees">
       <h1>Employees</h1>
-      <button className="btn" onClick={() => props.history.push("/employees/create")}>
-        Add Employee
-      </button>
+
+      <button onClick={() => props.history.push("/employees/create")}>Add Employee</button>
+
       <article className="employeeList">
         {employees.map(employee => {
-          const foundLocation = locations.find(location => location.id === employee.locationId);
+          const foundLocation = locations.find(location => location.id === employee.locationId) || {};
 
           return <Employee key={employee.id} employee={employee} location={foundLocation} />;
         })}
