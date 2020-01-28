@@ -4,51 +4,55 @@
       "id": 1,
       "name": "Doodles",
       "breed": "Poodle",
-      "customerId": 1,
-      "locationId": 1
+      "customerId": 3,
+      "locationId": 4
     },
     {
       "id": 2,
       "name": "Dutchess",
       "breed": "PitBull",
       "customerId": 2,
-      "locationId": 4
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Duece",
       "breed": "PitBull",
-      "customerId": 4,
-      "locationId": 4
+      "customerId": 1,
+      "locationId": 1
     },
     {
       "id": 4,
       "name": "Clifford",
       "breed": "The Big Red Dog",
-      "customerId": 1,
-      "locationId": 1
+      "customerId": 4,
+      "locationId": 5
     }
   ],
   "customers": [
     {
-      "id": 1,
-      "name": "Hannah Hall",
-      "address": "7002 Chestnut Ct"
-    },
-    {
-      "id": 2,
+      "email": "onterio@me.com",
+      "password": "123",
       "name": "Onterio Wright",
-      "address": "8181 Fannin Street"
+      "id": 1
     },
     {
-      "id": 3,
-      "name": "Sean Carter",
-      "address": "Merry Go Lane"
-    },
-    {
-      "id": 4,
+      "email": "danyeal@me.com",
+      "password": "123",
       "name": "Danyeal Wright",
-      "address": "8181 Fannin Street"
+      "id": 2
+    },
+    {
+      "email": "akemo@me.com",
+      "password": "123",
+      "name": "Akemo Wright",
+      "id": 3
+    },
+    {
+      "email": "diera@me.com",
+      "password": "123",
+      "name": "Diera Wright",
+      "id": 4
     }
   ],
   "employees": [
