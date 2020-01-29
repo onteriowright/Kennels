@@ -25,6 +25,12 @@ export default props => {
       <div className="animal__owner">Owner: {customer.name}</div>
       <button onClick={() => releaseAnimal(animal).then(props.history.push("/animals"))}>Release Animal</button>
       <button onClick={() => props.history.push("/animals")}>Close</button>
+      <button
+        onClick={() => {
+          props.history.push(`/animals/edit/${animal.id}`);
+        }}>
+        Edit
+      </button>
     </section>
   );
 };

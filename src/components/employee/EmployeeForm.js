@@ -18,7 +18,7 @@ export default props => {
       alert("Please select a location");
     } else {
       addEmployees({
-        name: employeeName.current.value,
+        name: nameValue,
         locationId: locationId
       });
     }
