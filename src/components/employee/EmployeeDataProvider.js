@@ -7,7 +7,7 @@ const EmployeeProvider = props => {
   const [employees, setEmployees] = useState([]);
 
   const getEmployees = () => {
-    return fetch("http://localhost:5000/employees")
+    return fetch("http://localhost:5000/employees?_expand=location")
       .then(res => res.json())
       .then(setEmployees);
   };
